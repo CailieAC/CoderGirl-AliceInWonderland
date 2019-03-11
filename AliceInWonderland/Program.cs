@@ -11,7 +11,8 @@ namespace AliceInWonderland
             // TODO: Prompt the user for a string within the first sentence of Alice in Wonderland to 
             //search for within this string.
             Console.Write("Enter a string: ");
-
+            
+            Console.WriteLine(Match(Console.ReadLine()));
             Console.ReadLine();
         }
 
@@ -20,8 +21,6 @@ namespace AliceInWonderland
 
         public static bool Match(string search)
         {
-            search = search.ToLower();
-
             return Alice.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0;
         }
     }
